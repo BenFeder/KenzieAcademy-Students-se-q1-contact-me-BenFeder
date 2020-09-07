@@ -14,8 +14,35 @@
     <link href="main.css" rel="stylesheet" media="all" />
   </head>
 
-  <body>
-    Put your form here!
+  <body class="container">
+    <!--Put your form here! -->
+    <section class="card">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name_input">Name</label>
+        <input
+          id="name_input"
+          type="text"
+          placeholder="What's your name?"
+          required
+        />
+        <label for="email_input">Email</label>
+        <input
+          id="email_input"
+          type="email"
+          placeholder="What's your email?"
+          required
+        />
+        <label for="message_input">Message</label>
+        <textarea
+          id="message_input"
+          placeholder="What's your message?"
+          required
+        >
+        </textarea>
+        <button id="submit_button" value="Submit">Submit</button>
+      </form>
+    </section>
     <script src="code.js"></script>
   </body>
 </html>
