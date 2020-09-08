@@ -1,6 +1,6 @@
 // Your Code Here!
 
-function getValues() {
+function getValues(event) {
   let nameItem = document.getElementById("name_input");
   let nameValue = nameItem.value;
 
@@ -10,14 +10,13 @@ function getValues() {
   let messageItem = document.getElementById("message_input");
   let messageValue = messageItem.value;
 
-  alert(
-    `Hello, ${nameValue}! Thank you for your message,
-    ${messageValue}, you wil reeive an email at
-    ${emailValue}.`);
+  let alertMessage = `Hello, ${nameValue}! Thank you for your message, ${messageValue}, you wil receive an email at ${emailValue}.`;
+
+  alert(alertMessage);
+
+  event.preventDefault();
 }
 
 let submitButton = document.getElementById("submit_button");
 
-submitButton.addEventListener("click", getValues) {
-    event.preventDefault();
-}
+submitButton.addEventListener("click", getValues);
